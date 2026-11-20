@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>12 · Estrategia y documentación — MQL Lab</title>
+<script>window.MQL_CFG={db:"__DB__",col:"__COL__",sandbox:"__SANDBOX__"};window.MQL_SITE={"name":"MQL Lab","author":"Javitech.co","handle":"javitech_co","web":"https://www.javitech.co","youtube":"https://youtube.com/@javitech_co?sub_confirmation=1","twitter":"https://twitter.com/intent/user?screen_name=javitech_co","linkedin":"https://www.linkedin.com/in/javierperezp","repo":""};try{var t=localStorage.getItem('mqlLab.theme');if(t)document.documentElement.setAttribute('data-theme',t);if(localStorage.getItem('mqlLab.nav')==='0')document.documentElement.classList.add('nav-collapsed')}catch(e){}</script>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="Ocultar el menú" title="Ocultar el menú" aria-expanded="true">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">{ }</span>MQL Lab</a>
+  <span class="crumb">Lección 12 · Estrategia y documentación</span>
+  <span class="spacer"></span>
+  <span class="pill author hdr-author"><span class="author-txt">Sitio dirigido por <a href="https://www.javitech.co" target="_blank" rel="noopener">Javitech.co</a></span><span class="soc-links"><a class="soc yt" href="https://youtube.com/@javitech_co?sub_confirmation=1" target="_blank" rel="noopener" title="YouTube de Javitech.co" aria-label="YouTube de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 00-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 002.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 001.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 001.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3z"/></svg></a><a class="soc x" href="https://twitter.com/intent/user?screen_name=javitech_co" target="_blank" rel="noopener" title="X (Twitter) de Javitech.co" aria-label="X (Twitter) de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.08 4.13H5.12z"/></svg></a><a class="soc in" href="https://www.linkedin.com/in/javierperezp" target="_blank" rel="noopener" title="LinkedIn de Javitech.co" aria-label="LinkedIn de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9.75h4v11.5H3zM9.75 9.75h3.83v1.57h.05c.53-1 1.84-2.07 3.78-2.07 4.04 0 4.79 2.66 4.79 6.12v5.88h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.29h-4z"/></svg></a></span></span>
+  <span class="pill conn"><span class="dot"></span><span class="txt">Conectando…</span></span>
+  <span class="pill xp" data-xp></span>
+  <button class="icon-btn" type="button" data-theme-toggle aria-label="Cambiar tema">◐</button>
+</header>
+<div class="layout">
+<nav class="sidebar" aria-label="Temario">
+    <a href="../index.html" class=""><span class="num"><span>⌂</span></span>Inicio y ruta</a>
+    <h4>Lecciones</h4><a href="../lecciones/00-servidor-mongoimport-mongosh.html" data-lesson="l00" class=""><span class="num"><span>00</span></span>Servidor, mongoimport y mongosh</a><a href="../lecciones/01-modelo-de-documentos.html" data-lesson="l01" class=""><span class="num"><span>01</span></span>Modelo de documentos</a><a href="../lecciones/02-find-filtro-proyeccion.html" data-lesson="l02" class=""><span class="num"><span>02</span></span>find(): filtro y proyección</a><a href="../lecciones/03-operadores-consulta.html" data-lesson="l03" class=""><span class="num"><span>03</span></span>Operadores de consulta</a><a href="../lecciones/04-arrays-y-subdocumentos.html" data-lesson="l04" class=""><span class="num"><span>04</span></span>Arrays y subdocumentos</a><a href="../lecciones/05-expresiones-regulares.html" data-lesson="l05" class=""><span class="num"><span>05</span></span>Expresiones regulares</a><a href="../lecciones/06-aggregation-pipeline.html" data-lesson="l06" class=""><span class="num"><span>06</span></span>Aggregation pipeline</a><a href="../lecciones/07-group-acumuladores.html" data-lesson="l07" class=""><span class="num"><span>07</span></span>$group y acumuladores</a><a href="../lecciones/08-unwind-arrays-embebidos.html" data-lesson="l08" class=""><span class="num"><span>08</span></span>$unwind y arrays embebidos</a><a href="../lecciones/09-expresiones-agregacion.html" data-lesson="l09" class=""><span class="num"><span>09</span></span>Expresiones de agregación</a><a href="../lecciones/10-facet-bucket-deciles.html" data-lesson="l10" class=""><span class="num"><span>10</span></span>$facet, $bucket y deciles</a><a href="../lecciones/11-mapreduce.html" data-lesson="l11" class=""><span class="num"><span>11</span></span>MapReduce</a><a href="../lecciones/12-estrategia-y-documentacion.html" data-lesson="l12" class="active"><span class="num"><span>12</span></span>Estrategia y documentación</a>
+    <h4>Misiones (simulación laboral)</h4><a href="../misiones/m1-auditoria-kyc.html" data-lesson="m1" class=""><span class="num"><span>M1</span></span>Auditoría KYC</a><a href="../misiones/m2-dni-invalidos.html" data-lesson="m2" class=""><span class="num"><span>M2</span></span>DNIs con formato inválido</a><a href="../misiones/m3-generos-mas-vistos.html" data-lesson="m3" class=""><span class="num"><span>M3</span></span>Los géneros que más tiempo consumen</a><a href="../misiones/m4-cine-por-pais.html" data-lesson="m4" class=""><span class="num"><span>M4</span></span>Cine por país de producción</a><a href="../misiones/m5-panel-de-facturacion.html" data-lesson="m5" class=""><span class="num"><span>M5</span></span>Panel de facturación en una consulta</a><a href="../misiones/m6-facturas-extremas.html" data-lesson="m6" class=""><span class="num"><span>M6</span></span>Facturas extremas por tarifa</a>
+    <h4>Progreso</h4><a href="#" data-reset><span class="num"><span>↺</span></span>Reiniciar progreso</a>
+  </nav>
+<main class="main">
+<article class="article">
+  <div class="hero">
+    <div class="eyebrow"><span class="tag mongo">Lección 12</span><span>⏱ 20 min</span></div>
+    <h1>Estrategia y documentación</h1>
+    <p class="lead">Saber los operadores no basta: lo que convierte una consulta en un resultado fiable es cómo la <b>planteas</b>, la <b>pruebas</b> y la <b>documentas</b>. Esta lección es el método para hacerlo bien con este dataset.</p>
+    <ul class="objectives"><li>Seguir un método repetible para cada consulta</li><li>Elegir la granularidad correcta antes de escribir código</li><li>Probar una consulta de forma convincente</li><li>Documentar con una plantilla clara</li></ul>
+  </div>
+  
+<div class="section-label">① Método</div>
+<h2>Seis pasos para cada consulta</h2>
+<figure class="figure">
+<svg viewBox="0 0 760 130" role="img" aria-label="Método: leer, explorar, diseñar, construir, probar, documentar">
+  <path d="M70 46H690" stroke="var(--line2)" stroke-width="2" stroke-dasharray="4 4"/>
+  <g><circle cx="60" cy="46" r="20" fill="var(--accent)" fill-opacity=".18" stroke="var(--accent)"/><text x="60" y="52" text-anchor="middle" style="font:800 15px var(--sans);fill:var(--accent)">1</text><text x="60" y="90" text-anchor="middle" style="font:700 13px var(--sans);fill:var(--text)">Leer</text><text x="60" y="108" text-anchor="middle" style="font:11px var(--sans);fill:var(--muted)">qué se pide</text></g>
+  <g><circle cx="180" cy="46" r="20" fill="var(--violet)" fill-opacity=".18" stroke="var(--violet)"/><text x="180" y="52" text-anchor="middle" style="font:800 15px var(--sans);fill:var(--violet)">2</text><text x="180" y="90" text-anchor="middle" style="font:700 13px var(--sans);fill:var(--text)">Explorar</text><text x="180" y="108" text-anchor="middle" style="font:11px var(--sans);fill:var(--muted)">campos y tipos</text></g>
+  <g><circle cx="300" cy="46" r="20" fill="var(--warn)" fill-opacity=".18" stroke="var(--warn)"/><text x="300" y="52" text-anchor="middle" style="font:800 15px var(--sans);fill:var(--warn)">3</text><text x="300" y="90" text-anchor="middle" style="font:700 13px var(--sans);fill:var(--text)">Diseñar</text><text x="300" y="108" text-anchor="middle" style="font:11px var(--sans);fill:var(--muted)">granularidad</text></g>
+  <g><circle cx="420" cy="46" r="20" fill="var(--mongo)" fill-opacity=".18" stroke="var(--mongo)"/><text x="420" y="52" text-anchor="middle" style="font:800 15px var(--sans);fill:var(--mongo)">4</text><text x="420" y="90" text-anchor="middle" style="font:700 13px var(--sans);fill:var(--text)">Construir</text><text x="420" y="108" text-anchor="middle" style="font:11px var(--sans);fill:var(--muted)">etapa a etapa</text></g>
+  <g><circle cx="540" cy="46" r="20" fill="var(--ok)" fill-opacity=".18" stroke="var(--ok)"/><text x="540" y="52" text-anchor="middle" style="font:800 15px var(--sans);fill:var(--ok)">5</text><text x="540" y="90" text-anchor="middle" style="font:700 13px var(--sans);fill:var(--text)">Probar</text><text x="540" y="108" text-anchor="middle" style="font:11px var(--sans);fill:var(--muted)">cruzar datos</text></g>
+  <g><circle cx="660" cy="46" r="20" fill="var(--accent)" fill-opacity=".18" stroke="var(--accent)"/><text x="660" y="52" text-anchor="middle" style="font:800 15px var(--sans);fill:var(--accent)">6</text><text x="660" y="90" text-anchor="middle" style="font:700 13px var(--sans);fill:var(--text)">Documentar</text><text x="660" y="108" text-anchor="middle" style="font:11px var(--sans);fill:var(--muted)">plantilla</text></g>
+</svg></figure>
+<div class="table-wrap"><table class="cheat"><thead><tr><th>Paso</th><th>Preguntas que debes poder responder</th></tr></thead><tbody><tr><td>1 · Leer</td><td>¿Qué devuelve exactamente la consulta: una lista, un número, un ranking, varias listas? ¿Qué campos de salida? ¿Hay un «top N»? ¿Qué técnica encaja mejor (find, pipeline, MapReduce)?</td></tr><tr><td>2 · Explorar</td><td>¿Qué campos intervienen? ¿Existen siempre? ¿Tienen siempre el mismo tipo? (Recetas de la lección 01.)</td></tr><tr><td>3 · Diseñar</td><td>¿Qué representa cada documento en cada etapa (factura, visualización, película, cliente)? ¿Hay que desplegar arrays? ¿Agrupar? ¿Deduplicar?</td></tr><tr><td>4 · Construir</td><td>Una etapa cada vez, mirando la salida con <code>$limit</code>; contando documentos entre etapas.</td></tr><tr><td>5 · Probar</td><td>¿Da lo mismo por otro camino? ¿Cuadra con un documento revisado a mano? ¿Qué pasa con los casos límite?</td></tr><tr><td>6 · Documentar</td><td>Plantilla de abajo.</td></tr></tbody></table></div>
+
+<div class="section-label">② Granularidad</div>
+<h2>La pregunta que evita la mitad de los errores</h2>
+<p>«¿Qué es una fila?» cambia a lo largo del pipeline. En este dataset hay varias respuestas posibles:</p>
+<div class="table-wrap"><table class="cheat"><thead><tr><th>Entidad</th><th>Cómo se obtiene</th><th>Trampa habitual</th></tr></thead><tbody><tr><td>Factura</td><td>la collection tal cual</td><td>contar facturas no es contar clientes (hay una por mes)</td></tr><tr><td>Visualización</td><td><code>$unwind</code> de <code>Movies</code> o <code>Series</code></td><td>las facturas sin el array desaparecen</td></tr><tr><td>Película (catálogo)</td><td><code>$unwind</code> + <code>$group</code> por título</td><td>sin deduplicar, las medias se ponderan por visualizaciones</td></tr></tbody></table></div>
+
+<div class="section-label">③ Probar</div>
+<h2>Cómo demostrar que una consulta está bien</h2>
+<ul>
+  <li><b>Comprobación cruzada</b>: el mismo número calculado por dos caminos (<code>countDocuments</code> frente a <code>$count</code>; MapReduce frente a pipeline).</li>
+  <li><b>Verificación manual</b>: elige un <code>_id</code> del resultado, ábrelo con <code>findOne</code> y comprueba a mano que cumple las condiciones.</li>
+  <li><b>Contraejemplos</b>: busca documentos que <i>no</i> deberían salir y confirma que no salen.</li>
+  <li><b>Recuentos por etapa</b>: <code>{ $count: "n" }</code> tras cada etapa clave; anota las cifras.</li>
+  <li><b>Casos límite</b>: documentos sin el campo, arrays vacíos, empates en el ranking, valores 0.</li>
+</ul>
+<div class="callout tip"><b>Rendimiento</b><p>Si quieres comentar la eficiencia: <code>db.coleccion.find(…).explain("executionStats")</code> o <code>db.coleccion.explain("executionStats").aggregate([…])</code> muestran cuántos documentos se examinaron y si se usó algún índice.</p></div>
+
+<div class="section-label">④ Documentar</div>
+<h2>Plantilla para documentar una consulta</h2>
+<div class="codeblock" data-lang="markdown"><span class="lang">markdown</span><pre><code>### Consulta · &lt;título&gt;
+
+**Planteamiento**
+- Qué se pide, con mis palabras: …
+- Granularidad: cada documento del resultado representa … (factura / visualización / película …)
+- Campos usados y anomalías encontradas (ausentes, tipos distintos, duplicados): …
+- Decisiones y supuestos (empates, valores ausentes…): …
+- Estrategia (etapas o fases y para qué sirve cada una): …
+- Alternativa(s) consideradas y por qué elegí esta: …
+
+**Consulta**
+```js
+db.coleccion.aggregate([
+  // 1) … qué hace esta etapa
+  { $match: { … } },
+  // 2) …
+])
+```
+
+**Verificación**
+- Resultado (o sus primeras filas) y recuentos: …
+- Comprobación cruzada (otro método que da lo mismo): …
+- Verificación manual sobre un documento concreto (_id …): …
+- Casos límite comprobados (documentos sin el campo, empates…): …</code></pre></div>
+
+  </article>
+  <section class="lab-section" id="lab">
+  <div class="lab-intro"><div class="section-label">▶ Laboratorio en vivo</div><h2>Lab 12 · Probar como un profesional</h2><p class="muted">La terminal de la derecha es <b>mongosh real</b> conectado a tu MongoDB. Cada paso se valida ejecutando tu consulta y comparando su resultado con el esperado.</p>
+  <div class="server-banner"></div></div>
+  <div class="lab-mount"><script type="application/json">{"id":"l12","title":"Lab 12 · Probar como un profesional","minutes":20,"done":"¡Has terminado el temario! Pon a prueba todo en las misiones, que simulan peticiones reales de un equipo.","steps":[{"kind":"quiz","title":"Granularidad","q":"Te piden «número medio de películas que ve un cliente al mes». ¿Qué representa cada documento en el cálculo final de la media?","options":["Una visualización","Una factura (cliente × mes), incluidas las que no tienen películas","Una película del catálogo","Un país"],"answer":1,"why":"La media es «por cliente y mes», es decir, por factura. Y las facturas sin películas cuentan como 0: si despliegas sin \u003ccode>preserveNullAndEmptyArrays\u003c/code> (o sin \u003ccode>$ifNull\u003c/code>), las pierdes y la media sube."},{"kind":"task","title":"Comprobación cruzada","body":"\u003cp>Sabemos contar con \u003ccode>find()\u003c/code> las facturas de \u003cb>España\u003c/b> con al menos una película:\u003c/p>\u003cdiv class=\"codeblock\" data-lang=\"js\">\u003cspan class=\"lang\">mongosh\u003c/span>\u003cpre>\u003ccode>db.__COL__.countDocuments({ \"contract.country\": \"Spain\", \"Movies.0\": { $exists: true } })\u003c/code>\u003c/pre>\u003c/div>\u003cp>Obtén el \u003cb>mismo número\u003c/b> con un pipeline que use \u003ccode>$unwind\u003c/code> de \u003ccode>Movies\u003c/code>. Resultado: \u003ccode>{ facturas: N }\u003c/code>.\u003c/p>","hints":["Tras \u003ccode>$unwind\u003c/code> cada factura aparece una vez por película: no puedes contar directamente.","Vuelve a nivel de factura agrupando por \u003ccode>\"$_id\"\u003c/code>.","\u003ccode>$match\u003c/code> → \u003ccode>$unwind\u003c/code> → \u003ccode>$group: { _id: \"$_id\" }\u003c/code> → \u003ccode>$count\u003c/code>."],"solution":"db.__COL__.aggregate([\n  { $match: { \"contract.country\": \"Spain\" } },\n  { $unwind: \"$Movies\" },\n  { $group: { _id: \"$_id\" } },\n  { $count: \"facturas\" }\n])","check":{"type":"query","ref":"db.__COL__.aggregate([{ $match: { \"contract.country\": \"Spain\", \"Movies.0\": { $exists: true } } }, { $count: \"facturas\" }])","mode":"docs"},"success":"Dos caminos distintos, el mismo número: eso es una prueba sólida para tu verificación."},{"kind":"quiz","title":"Contar después de desplegar","q":"Si en el paso anterior te saltas el \u003ccode>$group\u003c/code> y cuentas justo después de \u003ccode>$unwind\u003c/code>, ¿qué obtienes?","options":["El mismo número","El número de visualizaciones de películas de España, no de facturas","Error","El número de facturas sin películas"],"answer":1,"why":"Cada documento tras \u003ccode>$unwind\u003c/code> es una visualización. Cambiar de granularidad sin darte cuenta es el error más común."},{"kind":"task","title":"Verificación manual","body":"\u003cp>Elige un documento y compruébalo a mano. Para la \u003cb>primera factura\u003c/b> de la collection (su \u003ccode>_id\u003c/code> es \u003ccode>db.__COL__.findOne()._id\u003c/code>), calcula con un pipeline cuántas películas y cuántos episodios se vieron: \u003ccode>{ _id, peliculas, episodios }\u003c/code>. Después, ábrela con \u003ccode>findOne\u003c/code> y cuenta tú.\u003c/p>","hints":["\u003ccode>$match\u003c/code> por \u003ccode>_id\u003c/code>.","\u003ccode>$size\u003c/code> con \u003ccode>$ifNull\u003c/code> (lección 09)."],"solution":"db.__COL__.aggregate([\n  { $match: { _id: db.__COL__.findOne()._id } },\n  { $project: {\n      peliculas: { $size: { $ifNull: [\"$Movies\", []] } },\n      episodios: { $size: { $ifNull: [\"$Series\", []] } }\n  } }\n])","check":{"type":"query","ref":"db.__COL__.aggregate([{ $match: { _id: db.__COL__.findOne()._id } }, { $project: { peliculas: { $size: { $ifNull: [\"$Movies\", []] } }, episodios: { $size: { $ifNull: [\"$Series\", []] } } } }])","mode":"docs"}},{"kind":"quiz","title":"Qué es una buena verificación","q":"¿Qué verificación es más convincente?","options":["«La consulta funciona.»","Una captura con el resultado","El resultado, los recuentos por etapa, una comprobación cruzada por otro método y un documento verificado a mano","El tiempo de ejecución"],"answer":2,"why":"Una verificación debe convencer a quien la lee de que el resultado es correcto, no solo de que la consulta se ejecuta."},{"kind":"quiz","title":"Alternativas de diseño","q":"Quieres presentar una «alternativa de diseño». ¿Cuál es válida y útil?","options":["Cambiar los nombres de las variables","Resolver lo mismo con otra técnica (p. ej. pipeline frente a MapReduce, o \u003ccode>$facet\u003c/code> frente a dos consultas) y comparar resultados y ventajas","Añadir más etapas sin cambiar el resultado","Ejecutar la consulta dos veces"],"answer":1,"why":"Una alternativa real cambia el enfoque. Si además compruebas que da el mismo resultado, sirve también como prueba."}]}</script></div>
+</section>
+  <div class="article">
+  <nav class="pager"><a href="../lecciones/11-mapreduce.html"><small>← Anterior</small>11 · MapReduce</a><a class="nx" href="../misiones/m1-auditoria-kyc.html"><small>Siguiente →</small>M1 · Auditoría KYC</a></nav>
+  </div>
+</main>
+</div>
+<footer class="credits">
+  <div class="cta-ticker" data-ticker aria-live="polite"></div>
+  <span class="pill author foot-author"><span class="author-txt">Sitio dirigido por <a href="https://www.javitech.co" target="_blank" rel="noopener">Javitech.co</a></span><span class="soc-links"><a class="soc yt" href="https://youtube.com/@javitech_co?sub_confirmation=1" target="_blank" rel="noopener" title="YouTube de Javitech.co" aria-label="YouTube de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 00-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 002.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 001.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 001.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3z"/></svg></a><a class="soc x" href="https://twitter.com/intent/user?screen_name=javitech_co" target="_blank" rel="noopener" title="X (Twitter) de Javitech.co" aria-label="X (Twitter) de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.08 4.13H5.12z"/></svg></a><a class="soc in" href="https://www.linkedin.com/in/javierperezp" target="_blank" rel="noopener" title="LinkedIn de Javitech.co" aria-label="LinkedIn de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9.75h4v11.5H3zM9.75 9.75h3.83v1.57h.05c.53-1 1.84-2.07 3.78-2.07 4.04 0 4.79 2.66 4.79 6.12v5.88h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.29h-4z"/></svg></a></span></span>
+</footer>
+<script src="../assets/app.js"></script>
+
+<script src="../assets/lab.js"></script>
+</body>
+</html>

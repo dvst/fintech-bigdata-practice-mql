@@ -1,0 +1,11 @@
+{
+  "_ayuda": "Deja \"auto\" para que el tutorial detecte mongosh y el dataset solo. Pon un valor concreto solo si la detección falla. Las variables MQL_URI, MQL_DB, MQL_COLLECTION, MONGOSH_PATH y PORT tienen prioridad.",
+  "port": 3000,
+  "mongoUri": "mongodb://127.0.0.1:27017",
+  "database": "auto",
+  "collection": "auto",
+  "mongosh": "auto",
+  "sandboxDatabase": "mql_tutorial",
+  "commandTimeoutSeconds": 30,
+  "maxValidationDocs": 3000
+}

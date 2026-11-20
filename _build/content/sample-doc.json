@@ -1,0 +1,203 @@
+{
+  "_id": "ES20001/11/1/2025",
+  "billing": "January 2025",
+  "TOTAL": 16.65,
+  "Client": {
+    "customer code": "21/10203040/05T",
+    "DNI": "00000001R",
+    "Name": "Elena",
+    "Surname": [
+      "Soler",
+      "Vidal"
+    ],
+    "Birth date": "12/03/88",
+    "Phone": 555010001,
+    "Email": "elena.soler@example.com"
+  },
+  "contract": {
+    "contract ID": "ES20001/11",
+    "start date": "05/03/14",
+    "end date": "04/03/18",
+    "product": {
+      "Reference": "Free Rider",
+      "monthly fee": 10,
+      "type": "pay per content",
+      "cost per content": 2.5,
+      "zapping": 5,
+      "cost per minute": 0,
+      "cost per day": 0.95,
+      "promotion": 5
+    },
+    "address": "7 Maple Street, Second floor",
+    "town": "Redtown on Duero",
+    "ZIP": "28000",
+    "country": "Spain"
+  },
+  "Movies": [
+    {
+      "Date": "15/01/2016",
+      "Time": "00:57:00",
+      "Title": "The Paper Moon",
+      "License": {
+        "Date": "15/01/2016",
+        "Time": "00:00:00"
+      },
+      "Details": {
+        "Year": 2002,
+        "Country": "UK",
+        "Color": "yes",
+        "Aspect ratio": 1.85,
+        "Content Rating": "R",
+        "Budget": 12000000,
+        "Gross": 15750000,
+        "Director": {
+          "Name": "Marta Quiroga",
+          "Facebook likes": 545
+        },
+        "Cast": {
+          "Facebook likes": 9300,
+          "Stars": [
+            {
+              "Player": "Iván Prieto",
+              "Facebook likes": 766
+            },
+            {
+              "Player": "Lola Navarro",
+              "Facebook likes": 2000
+            },
+            {
+              "Player": "Teo Marín",
+              "Facebook likes": 6500
+            }
+          ]
+        },
+        "Language": "English",
+        "Genres": [
+          "Drama",
+          "Mystery",
+          "Thriller"
+        ],
+        "Keywords": [
+          "lantern",
+          "moon",
+          "letter",
+          "ferry",
+          "secret"
+        ],
+        "Faces in poster": 0,
+        "IMDB score": 6.7,
+        "IMDB link": "http://www.imdb.com/title/tt0000000/",
+        "Critic reviews": 226,
+        "User reviews": 1138,
+        "Voted users": 41250,
+        "Facebook likes": 0,
+        "Duration": 100
+      },
+      "Viewing PCT": 99
+    },
+    {
+      "Date": "18/01/2016",
+      "Time": "22:10:00",
+      "Title": "Letters from Verona",
+      "License": {
+        "Date": "18/01/2016",
+        "Time": "00:00:00"
+      },
+      "Details": {
+        "Year": 2009,
+        "Country": "USA",
+        "Color": "yes",
+        "Aspect ratio": 2.35,
+        "Content Rating": "PG-13",
+        "Budget": 40000000,
+        "Gross": 31200000,
+        "Director": {
+          "Name": "Raúl Ferrer",
+          "Facebook likes": 120
+        },
+        "Cast": {
+          "Facebook likes": 15200,
+          "Stars": [
+            {
+              "Player": "Carla Montes",
+              "Facebook likes": 9800
+            },
+            {
+              "Player": "Raúl Ferrer",
+              "Facebook likes": 120
+            }
+          ]
+        },
+        "Language": "English",
+        "Genres": [
+          "Drama",
+          "Romance"
+        ],
+        "Keywords": [
+          "letters",
+          "balcony",
+          "rivalry"
+        ],
+        "Faces in poster": 2,
+        "IMDB score": 7.1,
+        "IMDB link": "http://www.imdb.com/title/tt0000001/",
+        "Critic reviews": 310,
+        "User reviews": 804,
+        "Voted users": 128900,
+        "Facebook likes": 4000,
+        "Duration": 118
+      },
+      "Viewing PCT": 98
+    }
+  ],
+  "Series": [
+    {
+      "Date": "09/01/2016",
+      "Time": "21:04:00",
+      "Title": "Harbor General",
+      "Season": 5,
+      "Episode": 3,
+      "Avg duration": 45,
+      "Total Episodes": 24,
+      "Total Seasons": 8,
+      "License": {
+        "Date": "09/01/2016",
+        "Time": "00:00:00"
+      },
+      "Viewing PCT": 98
+    },
+    {
+      "Date": "12/01/2016",
+      "Time": "19:50:00",
+      "Title": "Six Roommates",
+      "Season": 2,
+      "Episode": 4,
+      "Avg duration": 22,
+      "Total Episodes": 13,
+      "Total Seasons": 10,
+      "License": {
+        "Date": "12/01/2016",
+        "Time": "00:00:00"
+      },
+      "Viewing PCT": 99
+    },
+    {
+      "Date": "20/01/2016",
+      "Time": "23:15:00",
+      "Title": "Alien Neighbor",
+      "Season": 3,
+      "Episode": 11,
+      "Avg duration": 30,
+      "Total Episodes": 26,
+      "Total Seasons": 4,
+      "License": {
+        "Date": "20/01/2016",
+        "Time": "00:00:00"
+      },
+      "Viewing PCT": 7
+    }
+  ],
+  "charge date": "03/05/25",
+  "issue date": "19/12/24",
+  "dump date": "29/06/25"
+}

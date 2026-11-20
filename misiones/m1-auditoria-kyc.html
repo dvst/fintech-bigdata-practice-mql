@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M1 · Auditoría KYC — MQL Lab</title>
+<script>window.MQL_CFG={db:"__DB__",col:"__COL__",sandbox:"__SANDBOX__"};window.MQL_SITE={"name":"MQL Lab","author":"Javitech.co","handle":"javitech_co","web":"https://www.javitech.co","youtube":"https://youtube.com/@javitech_co?sub_confirmation=1","twitter":"https://twitter.com/intent/user?screen_name=javitech_co","linkedin":"https://www.linkedin.com/in/javierperezp","repo":""};try{var t=localStorage.getItem('mqlLab.theme');if(t)document.documentElement.setAttribute('data-theme',t);if(localStorage.getItem('mqlLab.nav')==='0')document.documentElement.classList.add('nav-collapsed')}catch(e){}</script>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="Ocultar el menú" title="Ocultar el menú" aria-expanded="true">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">{ }</span>MQL Lab</a>
+  <span class="crumb">Misión M1 · Auditoría KYC</span>
+  <span class="spacer"></span>
+  <span class="pill author hdr-author"><span class="author-txt">Sitio dirigido por <a href="https://www.javitech.co" target="_blank" rel="noopener">Javitech.co</a></span><span class="soc-links"><a class="soc yt" href="https://youtube.com/@javitech_co?sub_confirmation=1" target="_blank" rel="noopener" title="YouTube de Javitech.co" aria-label="YouTube de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 00-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 002.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 001.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 001.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3z"/></svg></a><a class="soc x" href="https://twitter.com/intent/user?screen_name=javitech_co" target="_blank" rel="noopener" title="X (Twitter) de Javitech.co" aria-label="X (Twitter) de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.08 4.13H5.12z"/></svg></a><a class="soc in" href="https://www.linkedin.com/in/javierperezp" target="_blank" rel="noopener" title="LinkedIn de Javitech.co" aria-label="LinkedIn de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9.75h4v11.5H3zM9.75 9.75h3.83v1.57h.05c.53-1 1.84-2.07 3.78-2.07 4.04 0 4.79 2.66 4.79 6.12v5.88h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.29h-4z"/></svg></a></span></span>
+  <span class="pill conn"><span class="dot"></span><span class="txt">Conectando…</span></span>
+  <span class="pill xp" data-xp></span>
+  <button class="icon-btn" type="button" data-theme-toggle aria-label="Cambiar tema">◐</button>
+</header>
+<div class="layout">
+<nav class="sidebar" aria-label="Temario">
+    <a href="../index.html" class=""><span class="num"><span>⌂</span></span>Inicio y ruta</a>
+    <h4>Lecciones</h4><a href="../lecciones/00-servidor-mongoimport-mongosh.html" data-lesson="l00" class=""><span class="num"><span>00</span></span>Servidor, mongoimport y mongosh</a><a href="../lecciones/01-modelo-de-documentos.html" data-lesson="l01" class=""><span class="num"><span>01</span></span>Modelo de documentos</a><a href="../lecciones/02-find-filtro-proyeccion.html" data-lesson="l02" class=""><span class="num"><span>02</span></span>find(): filtro y proyección</a><a href="../lecciones/03-operadores-consulta.html" data-lesson="l03" class=""><span class="num"><span>03</span></span>Operadores de consulta</a><a href="../lecciones/04-arrays-y-subdocumentos.html" data-lesson="l04" class=""><span class="num"><span>04</span></span>Arrays y subdocumentos</a><a href="../lecciones/05-expresiones-regulares.html" data-lesson="l05" class=""><span class="num"><span>05</span></span>Expresiones regulares</a><a href="../lecciones/06-aggregation-pipeline.html" data-lesson="l06" class=""><span class="num"><span>06</span></span>Aggregation pipeline</a><a href="../lecciones/07-group-acumuladores.html" data-lesson="l07" class=""><span class="num"><span>07</span></span>$group y acumuladores</a><a href="../lecciones/08-unwind-arrays-embebidos.html" data-lesson="l08" class=""><span class="num"><span>08</span></span>$unwind y arrays embebidos</a><a href="../lecciones/09-expresiones-agregacion.html" data-lesson="l09" class=""><span class="num"><span>09</span></span>Expresiones de agregación</a><a href="../lecciones/10-facet-bucket-deciles.html" data-lesson="l10" class=""><span class="num"><span>10</span></span>$facet, $bucket y deciles</a><a href="../lecciones/11-mapreduce.html" data-lesson="l11" class=""><span class="num"><span>11</span></span>MapReduce</a><a href="../lecciones/12-estrategia-y-documentacion.html" data-lesson="l12" class=""><span class="num"><span>12</span></span>Estrategia y documentación</a>
+    <h4>Misiones (simulación laboral)</h4><a href="../misiones/m1-auditoria-kyc.html" data-lesson="m1" class="active"><span class="num"><span>M1</span></span>Auditoría KYC</a><a href="../misiones/m2-dni-invalidos.html" data-lesson="m2" class=""><span class="num"><span>M2</span></span>DNIs con formato inválido</a><a href="../misiones/m3-generos-mas-vistos.html" data-lesson="m3" class=""><span class="num"><span>M3</span></span>Los géneros que más tiempo consumen</a><a href="../misiones/m4-cine-por-pais.html" data-lesson="m4" class=""><span class="num"><span>M4</span></span>Cine por país de producción</a><a href="../misiones/m5-panel-de-facturacion.html" data-lesson="m5" class=""><span class="num"><span>M5</span></span>Panel de facturación en una consulta</a><a href="../misiones/m6-facturas-extremas.html" data-lesson="m6" class=""><span class="num"><span>M6</span></span>Facturas extremas por tarifa</a>
+    <h4>Progreso</h4><a href="#" data-reset><span class="num"><span>↺</span></span>Reiniciar progreso</a>
+  </nav>
+<main class="main">
+<article class="article">
+  <div class="hero">
+    <div class="eyebrow"><span class="tag mongo">Misión M1</span><span>⏱ 20 min</span></div>
+    <h1>Auditoría KYC</h1>
+    <p class="lead">Primer ticket de la semana. Compliance prepara una inspección y necesita localizar fichas de cliente incompletas. Es un trabajo de <code>find()</code>: filtros, ausencias, proyección y orden.</p>
+    
+  </div>
+  
+<section class="ticket">
+  <header class="tk-head"><span class="tk-type task">Task</span><span class="tk-key">DATA-101</span><span class="tk-status">EN CURSO</span></header>
+  <h2 class="tk-title">Listado de facturas de clientes de Canadá sin teléfono registrado</h2>
+  <div class="tk-grid">
+    <div class="tk-main">
+      <h4>Descripción</h4><p>El regulador ha pedido revisar los datos de contacto de los clientes canadienses. Necesitamos el listado de <b>facturas</b> de clientes de <b>Canadá</b> cuyo cliente <b>no tiene teléfono</b>, para que el equipo de atención los contacte por email.</p>
+      <h4>Criterios de aceptación</h4>
+      <ol class="tk-ac"><li>Solo facturas de <code>contract.country</code> = <code>"Canada"</code> sin <code>Client.Phone</code>.</li><li>Cada resultado contiene <b>únicamente</b> <code>_id</code>, <code>Client.Name</code>, <code>Client.DNI</code> y <code>Client.Email</code>.</li><li>Ordenado por <code>Client.DNI</code> ascendente y, a igualdad, por <code>_id</code> ascendente.</li></ol>
+      <h4>Actividad</h4><div class="tk-comments"><div class="tk-c"><span class="tk-av" style="background:#4c9bff">JM</span><div><div class="tk-cm"><b>Javier Molina</b> <span>Data Lead</span> · <span>hace 2 h</span></div><div class="tk-ct">Recuerda que en esta collection no todos los campos existen siempre. «Sin teléfono» significa que el campo no está: compruébalo antes de dar el número por bueno.</div></div></div><div class="tk-c"><span class="tk-av" style="background:#a78bfa">LF</span><div><div class="tk-cm"><b>Lucía Ferrer</b> <span>Compliance</span> · <span>hace 1 h</span></div><div class="tk-ct">Para el informe también necesito saber <b>cuántos clientes distintos</b> son, no solo cuántas facturas. Un cliente tiene una factura por mes.</div></div></div></div>
+    </div>
+    <aside class="tk-side">
+      <dl>
+        <dt>Prioridad</dt><dd><span class="tk-pr hi">▲</span> Alta</dd>
+        <dt>Informador</dt><dd><span class="tk-av sm" style="background:#a78bfa">LF</span> Lucía Ferrer</dd>
+        <dt>Asignado</dt><dd><span class="tk-av sm" style="background:var(--mongo);color:#04111a">TÚ</span> Tú</dd>
+        <dt>Sprint</dt><dd>Sprint 14</dd>
+        <dt>Estimación</dt><dd>20 min</dd>
+        <dt>Etiquetas</dt><dd><span class="tag">compliance</span> <span class="tag">kyc</span> <span class="tag">find</span></dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+<div class="callout tip"><b>Repaso</b><p>Lecciones <a href="../lecciones/02-find-filtro-proyeccion.html">02</a> (proyección y orden), <a href="../lecciones/03-operadores-consulta.html">03</a> (<code>$exists</code>) y <a href="../lecciones/07-group-acumuladores.html">07</a> (valores distintos).</p></div>
+
+  </article>
+  <section class="lab-section" id="lab">
+  <div class="lab-intro"><div class="section-label">▶ Laboratorio en vivo</div><h2>DATA-101 · Resolver el ticket</h2><p class="muted">Trabaja en la terminal de la derecha (mongosh real). Cada paso corresponde a un criterio de aceptación o a una petición del ticket, y se valida contra tu MongoDB.</p>
+  <div class="server-banner"></div></div>
+  <div class="lab-mount"><script type="application/json">{"id":"m1","title":"DATA-101 · Resolver el ticket","minutes":20,"intro":"Trabaja en la terminal de la derecha (mongosh real). Cada paso corresponde a un criterio de aceptación o a una petición del ticket, y se valida contra tu MongoDB.","done":"Ticket \u003cb>DATA-101\u003c/b> resuelto. Compliance ya tiene su listado y el número de clientes afectados.","steps":[{"kind":"task","xp":40,"title":"AC1 · Las facturas afectadas","body":"\u003cp>Obtén las facturas de clientes de Canadá sin teléfono (de momento, sin proyección ni orden).\u003c/p>","hints":["País con igualdad; teléfono con \u003ccode>$exists\u003c/code>.","\u003ccode>{ \"contract.country\": \"Canada\", \"Client.Phone\": { $exists: false } }\u003c/code>"],"solution":"db.__COL__.find({ \"contract.country\": \"Canada\", \"Client.Phone\": { $exists: false } })","check":{"type":"query","ref":"db.__COL__.find({ \"contract.country\": \"Canada\", \"Client.Phone\": { $exists: false } })","mode":"ids"}},{"kind":"task","xp":40,"title":"AC2 + AC3 · El listado final","body":"\u003cp>Completa la consulta: solo los campos pedidos y el orden pedido.\u003c/p>","hints":["Proyección de inclusión con los tres campos del cliente; \u003ccode>_id\u003c/code> sale por defecto.","Orden con dos claves: \u003ccode>{ \"Client.DNI\": 1, _id: 1 }\u003c/code>."],"solution":"db.__COL__.find(\n  { \"contract.country\": \"Canada\", \"Client.Phone\": { $exists: false } },\n  { \"Client.Name\": 1, \"Client.DNI\": 1, \"Client.Email\": 1 }\n).sort({ \"Client.DNI\": 1, _id: 1 })","check":{"type":"query","ref":"db.__COL__.find({ \"contract.country\": \"Canada\", \"Client.Phone\": { $exists: false } }, { \"Client.Name\": 1, \"Client.DNI\": 1, \"Client.Email\": 1 }).sort({ \"Client.DNI\": 1, _id: 1 })","mode":"docs","ordered":true,"extra":[{"label":"Cada resultado tiene solo Name, DNI y Email dentro de Client","test":"docs.every(function (d) { return d.Client && Object.keys(d.Client).sort().join() === \"DNI,Email,Name\"; })","hint":"Revisa la proyección: ¿falta o sobra algún campo del cliente?"}]}},{"kind":"task","xp":40,"title":"Petición de Lucía · Clientes distintos","body":"\u003cp>Lucía necesita el número de \u003cb>clientes distintos\u003c/b> afectados (identificados por \u003ccode>Client.customer code\u003c/code>). Resultado: \u003ccode>{ clientes: N }\u003c/code>.\u003c/p>","hints":["Necesitas un pipeline: filtra igual que antes y agrupa por el código de cliente.","Tras agrupar, cada documento es un cliente: cuéntalos con \u003ccode>$count\u003c/code>."],"solution":"db.__COL__.aggregate([\n  { $match: { \"contract.country\": \"Canada\", \"Client.Phone\": { $exists: false } } },\n  { $group: { _id: \"$Client.customer code\" } },\n  { $count: \"clientes\" }\n])","check":{"type":"query","ref":"db.__COL__.aggregate([{ $match: { \"contract.country\": \"Canada\", \"Client.Phone\": { $exists: false } } }, { $group: { _id: \"$Client.customer code\" } }, { $count: \"clientes\" }])","mode":"docs"}},{"kind":"quiz","xp":20,"title":"Antes de cerrar el ticket","q":"Un compañero sugiere incluir también los contratos sin fecha de fin, «porque también son fichas incompletas». ¿Qué haces?","options":["Los añado: cuantos más, mejor","Pregunto a Lucía si entra en el alcance antes de cambiar el resultado","Los añado en otra lista sin decir nada","Ignoro la sugerencia"],"answer":1,"why":"Un contrato sin fecha de fin puede ser simplemente indefinido: no es un dato «incompleto» por definición. Ante requisitos ambiguos, se pregunta y se documenta la decisión. Pasa lo mismo con cualquier encargo: si interpretas un requisito, déjalo escrito."}]}</script></div>
+</section>
+  <div class="article">
+  <nav class="pager"><a href="../lecciones/12-estrategia-y-documentacion.html"><small>← Anterior</small>12 · Estrategia y documentación</a><a class="nx" href="../misiones/m2-dni-invalidos.html"><small>Siguiente →</small>M2 · DNIs con formato inválido</a></nav>
+  </div>
+</main>
+</div>
+<footer class="credits">
+  <div class="cta-ticker" data-ticker aria-live="polite"></div>
+  <span class="pill author foot-author"><span class="author-txt">Sitio dirigido por <a href="https://www.javitech.co" target="_blank" rel="noopener">Javitech.co</a></span><span class="soc-links"><a class="soc yt" href="https://youtube.com/@javitech_co?sub_confirmation=1" target="_blank" rel="noopener" title="YouTube de Javitech.co" aria-label="YouTube de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 00-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 002.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 001.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 001.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3z"/></svg></a><a class="soc x" href="https://twitter.com/intent/user?screen_name=javitech_co" target="_blank" rel="noopener" title="X (Twitter) de Javitech.co" aria-label="X (Twitter) de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.08 4.13H5.12z"/></svg></a><a class="soc in" href="https://www.linkedin.com/in/javierperezp" target="_blank" rel="noopener" title="LinkedIn de Javitech.co" aria-label="LinkedIn de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9.75h4v11.5H3zM9.75 9.75h3.83v1.57h.05c.53-1 1.84-2.07 3.78-2.07 4.04 0 4.79 2.66 4.79 6.12v5.88h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.29h-4z"/></svg></a></span></span>
+</footer>
+<script src="../assets/app.js"></script>
+
+<script src="../assets/lab.js"></script>
+</body>
+</html>

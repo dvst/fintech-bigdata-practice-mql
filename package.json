@@ -1,0 +1,15 @@
+{
+  "name": "mql-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tutorial interactivo de MongoDB Query Language con laboratorios sobre tu propia base de datos",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node server.js --check",
+    "demo:data": "node demo/generate-demo-data.mjs",
+    "media": "node tools/record-media.cjs"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

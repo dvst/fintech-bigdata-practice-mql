@@ -1,0 +1,38 @@
+# --- Configuración local (cada persona tiene la suya; usa config.example.json como plantilla)
+config.json
+.env
+.env.*
+
+# --- Datos reales y documentos: nunca se publican
+*dump*.json
+*.bson
+*.pdf
+*.m4a
+*.mp3
+*.zip
+
+# --- Datos de demostración generados (se recrean con demo/generate-demo-data.mjs)
+demo/demo-data.json
+
+# --- Datos y logs de MongoDB en local
+data/
+*.wt
+mongod.lock
+*.log
+
+# --- Dependencias y artefactos
+node_modules/
+npm-debug.log*
+.npm/
+
+# --- Sistema operativo y editores
+.DS_Store
+.AppleDouble
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# --- Herramientas de asistente de código (configuración local)
+.claude/
+CLAUDE.md

@@ -1,0 +1,372 @@
+[
+  {
+    "_id": "ES10001/01/3/2025",
+    "billing": "March 2025",
+    "TOTAL": 24.25,
+    "Client": {
+      "Name": "Elena",
+      "Phone": 555010001
+    },
+    "contract": {
+      "product": {
+        "Reference": "Free Rider",
+        "type": "pay per content",
+        "zapping": 5
+      },
+      "country": "Spain"
+    },
+    "Movies": [
+      {
+        "Title": "Midnight Patrol",
+        "Genres": [
+          "Action",
+          "Comedy"
+        ],
+        "Viewing PCT": 98
+      },
+      {
+        "Title": "The Hollow Attic",
+        "Genres": [
+          "Fantasy",
+          "Horror"
+        ],
+        "Viewing PCT": 4
+      }
+    ],
+    "Series": [
+      {
+        "Title": "Alien Neighbor",
+        "Season": 3,
+        "Viewing PCT": 98
+      },
+      {
+        "Title": "Six Roommates",
+        "Season": 3,
+        "Viewing PCT": 99
+      }
+    ]
+  },
+  {
+    "_id": "PT10002/02/2/2025",
+    "billing": "February 2025",
+    "TOTAL": 15.7,
+    "Client": {
+      "Name": "Bruno",
+      "Phone": 555010002
+    },
+    "contract": {
+      "product": {
+        "Reference": "Free Rider",
+        "type": "pay per content",
+        "zapping": 5
+      },
+      "country": "Portugal"
+    },
+    "Series": [
+      {
+        "Title": "Harbor General",
+        "Season": 10,
+        "Viewing PCT": 11
+      },
+      {
+        "Title": "Harbor General",
+        "Season": 10,
+        "Viewing PCT": 5
+      }
+    ]
+  },
+  {
+    "_id": "IT10003/03/2/2025",
+    "billing": "February 2025",
+    "TOTAL": 39,
+    "Client": {
+      "Name": "Marco"
+    },
+    "contract": {
+      "product": {
+        "Reference": "Flat Rate Lover",
+        "type": "pay per content",
+        "zapping": 0
+      },
+      "country": "Italy"
+    },
+    "Movies": [
+      {
+        "Title": "Letters from Verona",
+        "Genres": [
+          "Drama"
+        ],
+        "Viewing PCT": 98
+      },
+      {
+        "Title": "The Quiet Cellar",
+        "Genres": [
+          "Drama",
+          "Horror"
+        ],
+        "Viewing PCT": 5
+      },
+      {
+        "Title": "Borrowed Heist",
+        "Genres": [
+          "Comedy",
+          "Crime"
+        ],
+        "Viewing PCT": 2
+      }
+    ],
+    "Series": [
+      {
+        "Title": "Lifeguard Bay",
+        "Season": 8,
+        "Viewing PCT": 2
+      },
+      {
+        "Title": "The Cabinet Room",
+        "Season": 3,
+        "Viewing PCT": 99
+      }
+    ]
+  },
+  {
+    "_id": "NO10004/04/3/2025",
+    "billing": "March 2025",
+    "TOTAL": 53.47,
+    "Client": {
+      "Name": "Ingrid",
+      "Phone": 555010004
+    },
+    "contract": {
+      "product": {
+        "Reference": "Premium Rider",
+        "type": "pay per view",
+        "zapping": 0
+      },
+      "country": "Norway"
+    },
+    "Movies": [
+      {
+        "Title": "The Gentle Burglar",
+        "Genres": [
+          "Comedy",
+          "Crime"
+        ],
+        "Viewing PCT": 98
+      },
+      {
+        "Title": "Jungle Run",
+        "Genres": [
+          "Action",
+          "Adventure"
+        ],
+        "Viewing PCT": 99
+      },
+      {
+        "Title": "Double Cross Express",
+        "Genres": [
+          "Action",
+          "Crime"
+        ],
+        "Viewing PCT": 98
+      }
+    ]
+  },
+  {
+    "_id": "ES10005/05/2/2025",
+    "billing": "February 2025",
+    "TOTAL": 50,
+    "Client": {
+      "Name": "Sergio"
+    },
+    "contract": {
+      "product": {
+        "Reference": "Premium Rider",
+        "type": "pay per view",
+        "zapping": 0
+      },
+      "country": "Spain"
+    },
+    "Movies": [
+      {
+        "Title": "Dawn Banners",
+        "Genres": [
+          "Drama",
+          "History"
+        ],
+        "Viewing PCT": 98
+      },
+      {
+        "Title": "Silver Falcon",
+        "Genres": [
+          "Action",
+          "Adventure"
+        ],
+        "Viewing PCT": 1
+      },
+      {
+        "Title": "My Dog Pepper",
+        "Genres": [
+          "Drama",
+          "Family"
+        ],
+        "Viewing PCT": 100
+      }
+    ]
+  },
+  {
+    "_id": "FR10006/06/2/2025",
+    "billing": "February 2025",
+    "TOTAL": 14.75,
+    "Client": {
+      "Name": "Claire",
+      "Phone": 555010006
+    },
+    "contract": {
+      "product": {
+        "Reference": "Free Rider",
+        "type": "pay per content",
+        "zapping": 5
+      },
+      "country": "France"
+    },
+    "Movies": [
+      {
+        "Title": "The Kitchen Inspector",
+        "Genres": [
+          "Comedy",
+          "Romance"
+        ],
+        "Viewing PCT": 100
+      },
+      {
+        "Title": "Frostline Crossing",
+        "Genres": [
+          "Action",
+          "Adventure"
+        ],
+        "Viewing PCT": 100
+      }
+    ],
+    "Series": [
+      {
+        "Title": "Inspector Valdés",
+        "Season": 4,
+        "Viewing PCT": 100
+      },
+      {
+        "Title": "Harbor General",
+        "Season": 1,
+        "Viewing PCT": 1
+      }
+    ]
+  },
+  {
+    "_id": "JP10007/07/6/2025",
+    "billing": "June 2025",
+    "TOTAL": 20.9,
+    "Client": {
+      "Name": "Haruto",
+      "Phone": 555010007
+    },
+    "contract": {
+      "product": {
+        "Reference": "Low Cost Rate",
+        "type": "pay per view",
+        "zapping": 4
+      },
+      "country": "Japan"
+    },
+    "Movies": [
+      {
+        "Title": "Dinner Table Chaos",
+        "Genres": [
+          "Comedy",
+          "Documentary"
+        ],
+        "Viewing PCT": 98
+      },
+      {
+        "Title": "Wild Numbers",
+        "Genres": [
+          "Documentary"
+        ],
+        "Viewing PCT": 100
+      },
+      {
+        "Title": "Chrome Chase 9",
+        "Genres": [
+          "Action",
+          "Crime"
+        ],
+        "Viewing PCT": 98
+      }
+    ],
+    "Series": [
+      {
+        "Title": "Harbor General",
+        "Season": 5,
+        "Viewing PCT": 98
+      },
+      {
+        "Title": "Harbor General",
+        "Season": 7,
+        "Viewing PCT": 98
+      }
+    ]
+  },
+  {
+    "_id": "PT10008/08/2/2025",
+    "billing": "February 2025",
+    "TOTAL": 17.6,
+    "Client": {
+      "Name": "Tiago",
+      "Phone": 555010008
+    },
+    "contract": {
+      "product": {
+        "Reference": "Free Rider",
+        "type": "pay per content",
+        "zapping": 5
+      },
+      "country": "Portugal"
+    },
+    "Movies": [
+      {
+        "Title": "The Window Across",
+        "Genres": [
+          "Drama",
+          "Mystery"
+        ],
+        "Viewing PCT": 100
+      },
+      {
+        "Title": "The Paper Compass",
+        "Genres": [
+          "Adventure",
+          "Family"
+        ],
+        "Viewing PCT": 100
+      },
+      {
+        "Title": "Voices of Lucía",
+        "Genres": [
+          "Biography",
+          "Drama"
+        ],
+        "Viewing PCT": 98
+      }
+    ],
+    "Series": [
+      {
+        "Title": "Forensic Unit Nine",
+        "Season": 12,
+        "Viewing PCT": 98
+      },
+      {
+        "Title": "Haunted Houses Weekly",
+        "Season": 2,
+        "Viewing PCT": 4
+      }
+    ]
+  }
+]

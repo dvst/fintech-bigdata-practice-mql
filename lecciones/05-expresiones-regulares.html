@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>05 · Expresiones regulares — MQL Lab</title>
+<script>window.MQL_CFG={db:"__DB__",col:"__COL__",sandbox:"__SANDBOX__"};window.MQL_SITE={"name":"MQL Lab","author":"Javitech.co","handle":"javitech_co","web":"https://www.javitech.co","youtube":"https://youtube.com/@javitech_co?sub_confirmation=1","twitter":"https://twitter.com/intent/user?screen_name=javitech_co","linkedin":"https://www.linkedin.com/in/javierperezp","repo":""};try{var t=localStorage.getItem('mqlLab.theme');if(t)document.documentElement.setAttribute('data-theme',t);if(localStorage.getItem('mqlLab.nav')==='0')document.documentElement.classList.add('nav-collapsed')}catch(e){}</script>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" type="button" aria-label="Ocultar el menú" title="Ocultar el menú" aria-expanded="true">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">{ }</span>MQL Lab</a>
+  <span class="crumb">Lección 05 · Expresiones regulares</span>
+  <span class="spacer"></span>
+  <span class="pill author hdr-author"><span class="author-txt">Sitio dirigido por <a href="https://www.javitech.co" target="_blank" rel="noopener">Javitech.co</a></span><span class="soc-links"><a class="soc yt" href="https://youtube.com/@javitech_co?sub_confirmation=1" target="_blank" rel="noopener" title="YouTube de Javitech.co" aria-label="YouTube de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 00-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 002.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 001.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 001.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3z"/></svg></a><a class="soc x" href="https://twitter.com/intent/user?screen_name=javitech_co" target="_blank" rel="noopener" title="X (Twitter) de Javitech.co" aria-label="X (Twitter) de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.08 4.13H5.12z"/></svg></a><a class="soc in" href="https://www.linkedin.com/in/javierperezp" target="_blank" rel="noopener" title="LinkedIn de Javitech.co" aria-label="LinkedIn de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9.75h4v11.5H3zM9.75 9.75h3.83v1.57h.05c.53-1 1.84-2.07 3.78-2.07 4.04 0 4.79 2.66 4.79 6.12v5.88h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.29h-4z"/></svg></a></span></span>
+  <span class="pill conn"><span class="dot"></span><span class="txt">Conectando…</span></span>
+  <span class="pill xp" data-xp></span>
+  <button class="icon-btn" type="button" data-theme-toggle aria-label="Cambiar tema">◐</button>
+</header>
+<div class="layout">
+<nav class="sidebar" aria-label="Temario">
+    <a href="../index.html" class=""><span class="num"><span>⌂</span></span>Inicio y ruta</a>
+    <h4>Lecciones</h4><a href="../lecciones/00-servidor-mongoimport-mongosh.html" data-lesson="l00" class=""><span class="num"><span>00</span></span>Servidor, mongoimport y mongosh</a><a href="../lecciones/01-modelo-de-documentos.html" data-lesson="l01" class=""><span class="num"><span>01</span></span>Modelo de documentos</a><a href="../lecciones/02-find-filtro-proyeccion.html" data-lesson="l02" class=""><span class="num"><span>02</span></span>find(): filtro y proyección</a><a href="../lecciones/03-operadores-consulta.html" data-lesson="l03" class=""><span class="num"><span>03</span></span>Operadores de consulta</a><a href="../lecciones/04-arrays-y-subdocumentos.html" data-lesson="l04" class=""><span class="num"><span>04</span></span>Arrays y subdocumentos</a><a href="../lecciones/05-expresiones-regulares.html" data-lesson="l05" class="active"><span class="num"><span>05</span></span>Expresiones regulares</a><a href="../lecciones/06-aggregation-pipeline.html" data-lesson="l06" class=""><span class="num"><span>06</span></span>Aggregation pipeline</a><a href="../lecciones/07-group-acumuladores.html" data-lesson="l07" class=""><span class="num"><span>07</span></span>$group y acumuladores</a><a href="../lecciones/08-unwind-arrays-embebidos.html" data-lesson="l08" class=""><span class="num"><span>08</span></span>$unwind y arrays embebidos</a><a href="../lecciones/09-expresiones-agregacion.html" data-lesson="l09" class=""><span class="num"><span>09</span></span>Expresiones de agregación</a><a href="../lecciones/10-facet-bucket-deciles.html" data-lesson="l10" class=""><span class="num"><span>10</span></span>$facet, $bucket y deciles</a><a href="../lecciones/11-mapreduce.html" data-lesson="l11" class=""><span class="num"><span>11</span></span>MapReduce</a><a href="../lecciones/12-estrategia-y-documentacion.html" data-lesson="l12" class=""><span class="num"><span>12</span></span>Estrategia y documentación</a>
+    <h4>Misiones (simulación laboral)</h4><a href="../misiones/m1-auditoria-kyc.html" data-lesson="m1" class=""><span class="num"><span>M1</span></span>Auditoría KYC</a><a href="../misiones/m2-dni-invalidos.html" data-lesson="m2" class=""><span class="num"><span>M2</span></span>DNIs con formato inválido</a><a href="../misiones/m3-generos-mas-vistos.html" data-lesson="m3" class=""><span class="num"><span>M3</span></span>Los géneros que más tiempo consumen</a><a href="../misiones/m4-cine-por-pais.html" data-lesson="m4" class=""><span class="num"><span>M4</span></span>Cine por país de producción</a><a href="../misiones/m5-panel-de-facturacion.html" data-lesson="m5" class=""><span class="num"><span>M5</span></span>Panel de facturación en una consulta</a><a href="../misiones/m6-facturas-extremas.html" data-lesson="m6" class=""><span class="num"><span>M6</span></span>Facturas extremas por tarifa</a>
+    <h4>Progreso</h4><a href="#" data-reset><span class="num"><span>↺</span></span>Reiniciar progreso</a>
+  </nav>
+<main class="main">
+<article class="article">
+  <div class="hero">
+    <div class="eyebrow"><span class="tag mongo">Lección 05</span><span>⏱ 30 min</span></div>
+    <h1>Expresiones regulares</h1>
+    <p class="lead">Cuando la condición no es «igual a» sino «<b>tiene esta forma</b>» (empieza por, termina en, contiene, sigue un formato) necesitas expresiones regulares. Es una de las herramientas más útiles para validar datos.</p>
+    <ul class="objectives"><li>Usar <code>$regex</code> y los literales <code>/…/</code> en <code>find()</code></li><li>Anclar patrones con <code>^</code> y <code>$</code></li><li>Describir formatos con clases y cuantificadores</li><li>Validar datos contando lo que cumple y lo que no</li></ul>
+  </div>
+  
+<div class="section-label">① Concepto</div>
+<h2>Un patrón describe una forma</h2>
+<figure class="figure">
+<svg viewBox="0 0 760 140" role="img" aria-label="Anatomía de la expresión regular del código de cliente">
+  
+    <rect x="10" y="30" width="44" height="40" rx="7" fill="var(--violet)" fill-opacity=".14" stroke="var(--violet)"/>
+    <text x="32" y="56" text-anchor="middle" style="font:700 16px var(--mono);fill:var(--violet)">^</text>
+    <text x="32" y="92" text-anchor="middle" style="font:11.5px var(--sans);fill:var(--muted)">inicio</text>
+  
+    <rect x="62" y="30" width="86" height="40" rx="7" fill="var(--accent)" fill-opacity=".14" stroke="var(--accent)"/>
+    <text x="105" y="56" text-anchor="middle" style="font:700 16px var(--mono);fill:var(--accent)">\d{2}</text>
+    <text x="105" y="92" text-anchor="middle" style="font:11.5px var(--sans);fill:var(--muted)">2 dígitos</text>
+  
+    <rect x="156" y="30" width="50" height="40" rx="7" fill="var(--warn)" fill-opacity=".14" stroke="var(--warn)"/>
+    <text x="181" y="56" text-anchor="middle" style="font:700 16px var(--mono);fill:var(--warn)">\/</text>
+    <text x="181" y="92" text-anchor="middle" style="font:11.5px var(--sans);fill:var(--muted)">«/»</text>
+  
+    <rect x="214" y="30" width="100" height="40" rx="7" fill="var(--accent)" fill-opacity=".14" stroke="var(--accent)"/>
+    <text x="264" y="56" text-anchor="middle" style="font:700 16px var(--mono);fill:var(--accent)">\d{8}</text>
+    <text x="264" y="92" text-anchor="middle" style="font:11.5px var(--sans);fill:var(--muted)">8 dígitos</text>
+  
+    <rect x="322" y="30" width="50" height="40" rx="7" fill="var(--warn)" fill-opacity=".14" stroke="var(--warn)"/>
+    <text x="347" y="56" text-anchor="middle" style="font:700 16px var(--mono);fill:var(--warn)">\/</text>
+    <text x="347" y="92" text-anchor="middle" style="font:11.5px var(--sans);fill:var(--muted)">«/»</text>
+  
+    <rect x="380" y="30" width="86" height="40" rx="7" fill="var(--accent)" fill-opacity=".14" stroke="var(--accent)"/>
+    <text x="423" y="56" text-anchor="middle" style="font:700 16px var(--mono);fill:var(--accent)">\d{2}</text>
+    <text x="423" y="92" text-anchor="middle" style="font:11.5px var(--sans);fill:var(--muted)">2 dígitos</text>
+  
+    <rect x="474" y="30" width="44" height="40" rx="7" fill="var(--ok)" fill-opacity=".14" stroke="var(--ok)"/>
+    <text x="496" y="56" text-anchor="middle" style="font:700 16px var(--mono);fill:var(--ok)">T</text>
+    <text x="496" y="92" text-anchor="middle" style="font:11.5px var(--sans);fill:var(--muted)">letra T</text>
+  
+    <rect x="526" y="30" width="44" height="40" rx="7" fill="var(--violet)" fill-opacity=".14" stroke="var(--violet)"/>
+    <text x="548" y="56" text-anchor="middle" style="font:700 16px var(--mono);fill:var(--violet)">$</text>
+    <text x="548" y="92" text-anchor="middle" style="font:11.5px var(--sans);fill:var(--muted)">fin</text>
+  <text x="590" y="48" style="font:600 13px var(--mono);fill:var(--text)">"21/10203040/05T" ✓</text>
+  <text x="590" y="70" style="font:600 13px var(--mono);fill:var(--muted)">"21/1020304/05T" ✕</text>
+  <text x="10" y="126" style="font:12px var(--sans);fill:var(--text2)">Formato de Client."customer code". Las barras se escapan (\/) porque en un literal /…/ la barra cerraría la expresión.</text>
+</svg></figure>
+<p>Pruébalo con valores de ejemplo inventados (algunos incumplen el formato a propósito, para que veas fallos). Edita el patrón o pulsa los ejemplos:</p>
+<div class="viz"><div class="viz-regex" data-cfg="{&quot;pattern&quot;:&quot;^The &quot;,&quot;flags&quot;:&quot;&quot;,&quot;samples&quot;:[&quot;The 7 Lanterns&quot;,&quot;The Lantern Keeper&quot;,&quot;Star Harbor: Episode II&quot;,&quot;Sisterly Love&quot;,&quot;10 Gloveworth Lane&quot;,&quot;404&quot;,&quot;24/7&quot;,&quot;Amberfall&quot;,&quot;Oakwood&quot;,&quot;Ashwood&quot;,&quot;Redtown on Duero&quot;,&quot;21/10203040/05T&quot;,&quot;47/55667788/12T&quot;,&quot;21/1020304/05T&quot;,&quot;47-55667788-12T&quot;],&quot;presets&quot;:[{&quot;label&quot;:&quot;empieza por&quot;,&quot;pattern&quot;:&quot;^The &quot;,&quot;note&quot;:&quot;&lt;code&gt;^&lt;/code&gt; ancla al principio. Sin el espacio también valdría «Theory».&quot;},{&quot;label&quot;:&quot;termina en&quot;,&quot;pattern&quot;:&quot;wood$&quot;,&quot;note&quot;:&quot;&lt;code&gt;$&lt;/code&gt; ancla al final.&quot;},{&quot;label&quot;:&quot;contiene&quot;,&quot;pattern&quot;:&quot;love&quot;,&quot;flags&quot;:&quot;i&quot;,&quot;note&quot;:&quot;¡«10 Gloveworth Lane» coincide! &lt;code&gt;love&lt;/code&gt; está dentro de «Gloveworth». Sin anclas, el patrón puede aparecer en cualquier parte.&quot;},{&quot;label&quot;:&quot;palabra completa&quot;,&quot;pattern&quot;:&quot;\\blove\\b&quot;,&quot;flags&quot;:&quot;i&quot;,&quot;note&quot;:&quot;&lt;code&gt;\\b&lt;/code&gt; es un límite de palabra: ahora solo «Sisterly Love».&quot;},{&quot;label&quot;:&quot;solo dígitos&quot;,&quot;pattern&quot;:&quot;^\\d+$&quot;,&quot;note&quot;:&quot;De principio a fin, uno o más dígitos.&quot;},{&quot;label&quot;:&quot;formato&quot;,&quot;pattern&quot;:&quot;^\\d{2}\\/\\d{8}\\/\\d{2}T$&quot;,&quot;note&quot;:&quot;El formato completo del código de cliente.&quot;},{&quot;label&quot;:&quot;alternativa&quot;,&quot;pattern&quot;:&quot;^(The|Star) &quot;,&quot;note&quot;:&quot;&lt;code&gt;|&lt;/code&gt; = o; los paréntesis agrupan.&quot;}]}"></div><p class="viz-cap">El probador usa el motor de JavaScript; MongoDB usa PCRE. Para todo lo de esta lección se comportan igual.</p></div>
+
+<div class="section-label">② Sintaxis</div>
+<h2>Dos formas de escribirlo en MongoDB</h2>
+<div class="codeblock" data-lang="js"><span class="lang">mongosh</span><pre><code>// 1) literal de JavaScript (lo más cómodo en mongosh)
+db.__COL__.find({ "Movies.Title": /^Star Wars/ })
+db.__COL__.find({ "Movies.Title": /star wars/i })          // i = sin distinguir mayúsculas
+
+// 2) operador $regex con un string
+db.__COL__.find({ "Movies.Title": { $regex: "^Star Wars" } })
+db.__COL__.find({ "Movies.Title": { $regex: "star wars", $options: "i" } })</code></pre></div>
+<div class="callout err"><b>La doble barra invertida</b><p>Dentro de un <b>string</b> la barra invertida se escapa: <code>{ $regex: "\\d$" }</code>. Si escribes <code>"\d$"</code>, JavaScript convierte <code>\d</code> en una simple <code>d</code> y buscas textos que terminan en la letra d. En los literales <code>/\d$/</code> no hay que duplicarla.</p></div>
+
+<div class="section-label">③ El lenguaje</div>
+<h2>Piezas básicas</h2>
+<div class="table-wrap"><table class="cheat"><thead><tr><th>Pieza</th><th>Significa</th><th>Ejemplo</th></tr></thead><tbody><tr><td><code>^</code> · <code>$</code></td><td>inicio · final del texto</td><td><code>/^The /</code>, <code>/wood$/</code></td></tr><tr><td><code>.</code></td><td>cualquier carácter</td><td><code>/^S.n/</code> → San, Sin, S3n</td></tr><tr><td><code>\d</code> · <code>\w</code> · <code>\s</code></td><td>dígito · letra/dígito/_ · espacio</td><td><code>/\d{8}/</code></td></tr><tr><td><code>\D</code> · <code>\W</code> · <code>\S</code></td><td>lo contrario</td><td><code>/^\S+$/</code> = sin espacios</td></tr><tr><td><code>[abc]</code> · <code>[a-z]</code> · <code>[^@]</code></td><td>uno de · rango · cualquiera menos</td><td><code>/^[A-Z]/</code></td></tr><tr><td><code>*</code> · <code>+</code> · <code>?</code></td><td>0 o más · 1 o más · 0 o 1</td><td><code>/^\d+$/</code></td></tr><tr><td><code>{n}</code> · <code>{n,m}</code></td><td>exactamente n · entre n y m</td><td><code>/^\d{5}$/</code></td></tr><tr><td><code>(a|b)</code></td><td>a o b (agrupa)</td><td><code>/^(The|A) /</code></td></tr><tr><td><code>\b</code></td><td>límite de palabra</td><td><code>/\blove\b/i</code></td></tr><tr><td><code>\.</code> <code>\/</code> <code>\(</code> <code>\$</code>…</td><td>el carácter literal (escapado)</td><td><code>/\.com$/</code></td></tr></tbody></table></div>
+<div class="quiz" data-quiz="{&quot;id&quot;:&quot;l05-q1&quot;,&quot;q&quot;:&quot;¿Qué títulos encuentra &lt;code&gt;/\\d/&lt;/code&gt;?&quot;,&quot;options&quot;:[&quot;Los que son solo un número&quot;,&quot;Los que contienen al menos un dígito en cualquier posición&quot;,&quot;Los que empiezan por un dígito&quot;,&quot;Los que terminan en un dígito&quot;],&quot;answer&quot;:1,&quot;why&quot;:&quot;Sin anclas, un patrón coincide si aparece en cualquier parte. Solo número: &lt;code&gt;/^\\d+$/&lt;/code&gt;; empieza: &lt;code&gt;/^\\d/&lt;/code&gt;; termina: &lt;code&gt;/\\d$/&lt;/code&gt;.&quot;}"></div>
+
+<div class="section-label">④ Detalles</div>
+<h2>Lo que conviene saber</h2>
+<ul>
+  <li><b>Sobre arrays</b>, el patrón se prueba contra cada elemento: <code>{ "Movies.Details.Genres": /^Sci/ }</code>.</li>
+  <li><b>Solo funciona con strings.</b> Un campo numérico (como <code>Client.Phone</code>) nunca coincide con una regex. Para eso hay que convertirlo a texto en agregación (<code>$toString</code> + <code>$regexMatch</code>, lección 09).</li>
+  <li><b>Negar:</b> <code>{ campo: { $not: /patrón/ } }</code>. Igual que <code>$ne</code>, también coincide cuando el campo <b>no existe</b>: añade <code>$exists: true</code> si no lo quieres.</li>
+  <li><b>Varios patrones:</b> <code>{ campo: { $in: [/^The /, /^A /] } }</code>.</li>
+  <li><b>Rendimiento:</b> un patrón anclado con <code>^</code> y sin <code>i</code> puede usar un índice; <code>/abc/i</code> obliga a revisar todos los valores.</li>
+</ul>
+
+<div class="section-label">⑤ Validar</div>
+<h2>Método para validar un formato</h2>
+<ol>
+  <li><b>Descríbelo con palabras</b>: «dos dígitos, barra, ocho dígitos, barra, dos dígitos y una T».</li>
+  <li><b>Tradúcelo a un patrón anclado</b> de principio a fin (<code>^…$</code>): sin anclas validas solo un trozo.</li>
+  <li><b>Cuenta</b> los que cumplen y los que no (con <code>$not</code>): ¿suman el total?</li>
+  <li><b>Mira ejemplos</b> de los que no cumplen con <code>.limit(5)</code>: ¿son errores de datos o tu patrón es demasiado estricto?</li>
+  <li><b>Piensa en casos límite</b>: espacios, caracteres repetidos, partes vacías, mayúsculas.</li>
+</ol>
+<div class="callout exam"><b>Documenta tus pruebas</b><p>Una consulta con regex queda muy bien probada si muestras ejemplos que deben coincidir, ejemplos que no deben coincidir y los recuentos del paso 3.</p></div>
+
+<div class="section-label">⑥ Chuleta</div>
+<h2>Resumen</h2>
+<div class="table-wrap"><table class="cheat"><thead><tr><th>Quiero…</th><th>Escribo</th></tr></thead><tbody><tr><td>empieza por</td><td><code>/^texto/</code></td></tr><tr><td>termina en</td><td><code>/texto$/</code></td></tr><tr><td>contiene, sin mayúsculas</td><td><code>/texto/i</code></td></tr><tr><td>palabra completa</td><td><code>/\btexto\b/</code></td></tr><tr><td>formato exacto</td><td><code>/^…$/</code></td></tr><tr><td>no cumple</td><td><code>{ $not: /…/ }</code> (+ <code>$exists: true</code>)</td></tr><tr><td>como string</td><td><code>{ $regex: "…", $options: "i" }</code> (barras invertidas dobles)</td></tr></tbody></table></div>
+
+  </article>
+  <section class="lab-section" id="lab">
+  <div class="lab-intro"><div class="section-label">▶ Laboratorio en vivo</div><h2>Lab 05 · Patrones en los datos</h2><p class="muted">La terminal de la derecha es <b>mongosh real</b> conectado a tu MongoDB. Cada paso se valida ejecutando tu consulta y comparando su resultado con el esperado.</p>
+  <div class="server-banner"></div></div>
+  <div class="lab-mount"><script type="application/json">{"id":"l05","title":"Lab 05 · Patrones en los datos","minutes":30,"done":"Con esto cierras el bloque de \u003ccode>find()\u003c/code>. En la lección 06 empieza el aggregation pipeline.","steps":[{"kind":"task","title":"Empieza por…","body":"\u003cp>Facturas de \u003cb>España\u003c/b> en las que alguna película vista tenga un título que \u003cb>empieza por «The »\u003c/b> (con espacio).\u003c/p>","hints":["Ancla al principio con \u003ccode>^\u003c/code>.","Los títulos están en \u003ccode>\"Movies.Title\"\u003c/code>: la regex se prueba contra cada película."],"solution":"db.__COL__.find({ \"contract.country\": \"Spain\", \"Movies.Title\": /^The / })","check":{"type":"query","ref":"db.__COL__.find({ \"contract.country\": \"Spain\", \"Movies.Title\": /^The / })","mode":"ids"}},{"kind":"task","title":"…termina en","body":"\u003cp>Facturas de clientes de \u003cb>España\u003c/b> cuya población (\u003ccode>contract.town\u003c/code>) \u003cb>termina en «wood»\u003c/b>.\u003c/p>","hints":["Ancla al final con \u003ccode>$\u003c/code>."],"solution":"db.__COL__.find({ \"contract.country\": \"Spain\", \"contract.town\": /wood$/ })","check":{"type":"query","ref":"db.__COL__.find({ \"contract.country\": \"Spain\", \"contract.town\": /wood$/ })","mode":"ids"}},{"kind":"task","title":"Sin mayúsculas","body":"\u003cp>En toda la collection, facturas en las que se vio alguna película de \u003cb>Star Wars\u003c/b>, escrito como sea («Star Wars», «STAR WARS»…).\u003c/p>","hints":["Contiene, sin anclas.","El modificador \u003ccode>i\u003c/code> ignora mayúsculas y minúsculas."],"solution":"db.__COL__.find({ \"Movies.Title\": /star wars/i })","check":{"type":"query","ref":"db.__COL__.find({ \"Movies.Title\": /star wars/i })","mode":"ids"}},{"kind":"task","title":"Con $regex","body":"\u003cp>Facturas de \u003cb>España\u003c/b> con alguna película cuyo título contenga \u003cb>«love»\u003c/b> en cualquier combinación de mayúsculas. Esta vez usa la forma \u003ccode>{ $regex: …, $options: … }\u003c/code>.\u003c/p>","hints":["El patrón va como string.","Las opciones van en \u003ccode>$options\u003c/code>: \u003ccode>\"i\"\u003c/code>."],"solution":"db.__COL__.find({\n  \"contract.country\": \"Spain\",\n  \"Movies.Title\": { $regex: \"love\", $options: \"i\" }\n})","check":{"type":"query","ref":"db.__COL__.find({ \"contract.country\": \"Spain\", \"Movies.Title\": { $regex: \"love\", $options: \"i\" } })","mode":"ids"},"success":"Revisa los títulos: ¿todos contienen la palabra «love» o hay coincidencias dentro de otras palabras? ¿Cómo lo evitarías?"},{"kind":"task","title":"Solo números","body":"\u003cp>Facturas de \u003cb>España\u003c/b> en las que alguna película tenga un título formado \u003cb>únicamente por dígitos\u003c/b> (como «300»).\u003c/p>","hints":["«Únicamente» significa de principio a fin: dos anclas.","Uno o más dígitos: \u003ccode>\\d+\u003c/code>."],"solution":"db.__COL__.find({ \"contract.country\": \"Spain\", \"Movies.Title\": /^\\d+$/ })","check":{"type":"query","ref":"db.__COL__.find({ \"contract.country\": \"Spain\", \"Movies.Title\": /^\\d+$/ })","mode":"ids"},"success":"Prueba a quitar las anclas y compara el recuento: así se ve por qué un patrón de validación debe estar anclado."},{"kind":"quiz","title":"Validar un formato","body":"\u003cp>Cuenta los códigos de cliente que \u003cb>no\u003c/b> siguen el formato «2 dígitos / 8 dígitos / 2 dígitos + T»:\u003c/p>\u003cdiv class=\"codeblock\" data-lang=\"js\">\u003cspan class=\"lang\">mongosh\u003c/span>\u003cpre>\u003ccode>db.__COL__.countDocuments({\n  \"Client.customer code\": { $not: /^\\d{2}\\/\\d{8}\\/\\d{2}T$/ }\n})\u003c/code>\u003c/pre>\u003c/div>","q":"¿Cuántos códigos de cliente tienen un formato incorrecto?","live":"db.__COL__.countDocuments({ \"Client.customer code\": { $not: /^\\d{2}\\/\\d{8}\\/\\d{2}T$/ } })","options":["{{live}}","Unos 5.000","La mitad","Todos"],"answer":0,"why":"Los datos de este campo están limpios. Un recuento de incumplimientos es una buena prueba para documentar, sea cual sea el resultado: demuestra que lo has comprobado."}]}</script></div>
+</section>
+  <div class="article">
+  <nav class="pager"><a href="../lecciones/04-arrays-y-subdocumentos.html"><small>← Anterior</small>04 · Arrays y subdocumentos</a><a class="nx" href="../lecciones/06-aggregation-pipeline.html"><small>Siguiente →</small>06 · Aggregation pipeline</a></nav>
+  </div>
+</main>
+</div>
+<footer class="credits">
+  <div class="cta-ticker" data-ticker aria-live="polite"></div>
+  <span class="pill author foot-author"><span class="author-txt">Sitio dirigido por <a href="https://www.javitech.co" target="_blank" rel="noopener">Javitech.co</a></span><span class="soc-links"><a class="soc yt" href="https://youtube.com/@javitech_co?sub_confirmation=1" target="_blank" rel="noopener" title="YouTube de Javitech.co" aria-label="YouTube de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 00-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 002.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 001.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 001.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3z"/></svg></a><a class="soc x" href="https://twitter.com/intent/user?screen_name=javitech_co" target="_blank" rel="noopener" title="X (Twitter) de Javitech.co" aria-label="X (Twitter) de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.08 4.13H5.12z"/></svg></a><a class="soc in" href="https://www.linkedin.com/in/javierperezp" target="_blank" rel="noopener" title="LinkedIn de Javitech.co" aria-label="LinkedIn de Javitech.co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9.75h4v11.5H3zM9.75 9.75h3.83v1.57h.05c.53-1 1.84-2.07 3.78-2.07 4.04 0 4.79 2.66 4.79 6.12v5.88h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.29h-4z"/></svg></a></span></span>
+</footer>
+<script src="../assets/app.js"></script>
+<script src="../assets/mingo.min.js"></script><script src="../assets/viz.js"></script>
+<script src="../assets/lab.js"></script>
+</body>
+</html>
